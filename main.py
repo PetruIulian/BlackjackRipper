@@ -1,16 +1,14 @@
 from modules.dialogs import startScreen, ask
 from modules.strategyParse import parseStrategy
-from modules.pictureReadings import read_and_process_cards
-if __name__ == "__main__":
-    startScreen()
-    ans = ask("Do you want to start?", {"a": "Yes", "b": "No"})
-    if ans == "a":
-        img_path = "files/screenshot.png"
-        my_cards_text, dealer_cards_text = read_and_process_cards(img_path)
+from modules.ai_model import start_ai
+from modules.ui import MainWindow
+from PyQt5.QtWidgets import QApplication
+import sys
 
-    # Afișarea rezultatelor
-        print(f"Cărțile jucătorului: {my_cards_text}")
-        print(f"Cărțile dealerului: {dealer_cards_text}")
-    else:
-        print("Bye!")
-    
+if __name__ == "__main__":
+    # Start the UI
+    app = QApplication(sys.argv)
+    window = MainWindow()
+    window.show()
+    sys.exit(app.exec_())
+
