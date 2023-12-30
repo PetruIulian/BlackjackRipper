@@ -1,5 +1,4 @@
 from modules.dialogs import startScreen, ask
-from modules.strategyParse import parseStrategy
 from modules.ai_model import start_ai
 from modules.ui import MainWindow
 from PyQt5.QtWidgets import QApplication
