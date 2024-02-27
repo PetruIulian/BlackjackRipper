@@ -157,6 +157,7 @@ best.pt
 yolov8s_playing_cards.pt
 runs
 datasets
+README.dataset.txt
 
 # PyCharm
 #  JetBrains specific template is maintained in a separate JetBrains.gitignore that can
